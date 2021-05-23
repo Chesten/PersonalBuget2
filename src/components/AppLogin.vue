@@ -1,6 +1,6 @@
 <template>
     <div class="logIn">
-        <table class=logIn-inpuut-table>
+        <table class=logIn-input-table>
             <tr>
                 <td>Email</td>
                 <td><input type="text" v-model="userEmail"></td>
@@ -15,6 +15,13 @@
             </tr>
         </table>
         <div>{{message}}</div>
+        <div class = "message">
+            <ul>
+                <li>to a template of a profile that has some data in it, use abc@mail.com, and 123123 for the password</li>
+                <li>Log in will check to make sure password is longer then 6 chars and email follows some formating, str "@" str "." str</li>
+                <li>User data is stored on a firebase server, and all kept seperate, so no user can access anothers data.</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -73,5 +80,8 @@ export default class AppLogin extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
+#message{
+    text-align: left;
+    max-width: 25em;
+}
 </style>
